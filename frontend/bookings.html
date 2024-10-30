@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Bookings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">VRMS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="vehicles.html">Vehicles</a></li>
+                <li class="nav-item"><a class="nav-link" href="customers.html">Customers</a></li>
+                <li class="nav-item"><a class="nav-link" href="bookings.html">Bookings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Create Booking</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="vehicleSelect">Vehicle:</label>
+                        <select id="vehicleSelect" class="form-control" required>
+                            <option value="" disabled selected>Select a vehicle</option>
+                            <!-- Vehicle options will be dynamically populated here -->
+                        </select>
+                        <span class="error-message" id="vehicleSelectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerSelect">Customer:</label>
+                        <select id="customerSelect" class="form-control" required>
+                            <option value="" disabled selected>Select a customer</option>
+                            <!-- Customer options will be dynamically populated here -->
+                        </select>
+                        <span class="error-message" id="customerSelectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="rentalStartDate">Start Date:</label>
+                        <input type="date" id="rentalStartDate" class="form-control" required>
+                        <span class="error-message" id="rentalStartDateError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="rentalEndDate">End Date:</label>
+                        <input type="date" id="rentalEndDate" class="form-control" required>
+                        <span class="error-message" id="rentalEndDateError"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="error-message" id="bookingError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Booking</button>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h2 class="card-title">Booking List</h2>
+                <ul id="bookingList" class="list-group">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

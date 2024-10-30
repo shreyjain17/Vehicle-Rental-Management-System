@@ -1,0 +1,55 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.navbar {
+    background-color: #4a90e2 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #f5a623 !important;
+}
+
+.card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #4a90e2;
+}
+
+.list-group-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item .item-header {
+    font-weight: bold;
+    color: #4a90e2;
+    margin-bottom: 0.25rem;
+}
+
+.list-group-item .item-detail {
+    color: #666;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #d9534f;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+}

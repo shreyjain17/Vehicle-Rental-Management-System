@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Vehicles</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">VRMS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="vehicles.html">Vehicles</a></li>
+                <li class="nav-item"><a class="nav-link" href="customers.html">Customers</a></li>
+                <li class="nav-item"><a class="nav-link" href="bookings.html">Bookings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Add New Vehicle</h2>
+                <form id="vehicleForm">
+                    <div class="form-group">
+                        <label for="vehicleName">Name:</label>
+                        <input type="text" class="form-control" id="vehicleName" required>
+                        <span class="error-message" id="vehicleNameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleNo">Vehicle No:</label>
+                        <input type="text" class="form-control" id="vehicleNo" required>
+                        <span class="error-message" id="vehicleNoError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleType">Type:</label>
+                        <input type="text" class="form-control" id="vehicleType" required>
+                        <span class="error-message" id="vehicleTypeError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="rentalRate">Rental Rate:</label>
+                        <input type="number" class="form-control" id="rentalRate" required>
+                        <span class="error-message" id="rentalRateError"></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="error-message" id="vehicleError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Vehicle</button>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h2 class="card-title">Vehicle List</h2>
+                <ul id="vehicleList" class="list-group">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
